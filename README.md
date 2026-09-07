@@ -1,6 +1,6 @@
 # ColdProof website
 
-A full-stack product website for the ColdProof smart refrigerator backup concept. It includes a responsive marketing experience, live outage-status simulation, a refrigerator runtime estimator, and a D1-backed pilot signup form.
+A full-stack, multi-page product website for the ColdProof smart refrigerator backup concept. It includes a responsive product experience, live outage-status simulation, a refrigerator runtime estimator, and a D1-backed pilot signup flow with a dedicated success page.
 
 ## Open in VS Code
 
@@ -19,11 +19,23 @@ A full-stack product website for the ColdProof smart refrigerator backup concept
 
 ## Project structure
 
-- `app/coldproof-site.tsx` contains the interactive frontend.
-- `app/globals.css` contains the complete visual system and responsive styling.
+- `app/` contains the home page and all route pages.
+- `components/site/` contains shared navigation, footer, monitor, calculator, and pilot-form components.
+- `app/globals.css` contains the complete brand system and responsive styling.
 - `app/api/` contains backend API routes.
 - `db/schema.ts` defines the pilot waitlist database.
 - `public/` contains the ColdProof logo and favicon.
+
+## Website routes
+
+- `/` - Product introduction and overview
+- `/product` - Complete product story and comparison
+- `/technology` - Architecture, modules, and validation plan
+- `/monitor` - Interactive outage-monitoring experience
+- `/runtime` - Interactive backup-runtime estimator
+- `/pricing` - Current pricing hypotheses
+- `/pilot` - Pilot application form
+- `/pilot/success` - Dedicated post-submission confirmation
 
 ## Backend endpoints
 
