@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="88" viewBox="0 0 360 88" role="img" aria-labelledby="title">
+  <title id="title">ColdProof</title>
+  <path d="M39 4 70 16v23c0 20-12 34-31 44C20 73 8 59 8 39V16L39 4Z" fill="#072B4F"/>
+  <path d="M39 11 63 20v18c0 16-8 28-24 36-16-8-24-20-24-36V20l24-9Z" fill="none" stroke="#fff" stroke-width="3"/>
+  <g stroke="#25C4F4" stroke-width="3" stroke-linecap="round"><path d="M39 22v29M26 29l26 15M26 44l26-15"/><path d="m34 25 5-4 5 4M34 48l5 4 5-4M27 34l-1-6 6 1M46 45l6 1-1-6M27 39l-1 6 6-1M46 29l6-1-1 6"/></g>
+  <path d="m27 57 8 8 17-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="88" y="59" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="800" letter-spacing="-2.4" fill="#072B4F">Cold<tspan fill="#1479F8">Proof</tspan></text>
+</svg>
