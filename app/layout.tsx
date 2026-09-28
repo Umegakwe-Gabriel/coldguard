@@ -4,7 +4,7 @@ import { Footer } from "@/components/site/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "ColdProof | Smart refrigerator resilience", template: "%s | ColdProof" },
+  title: { default: "ColdGuard | Power goes. Cold stays.", template: "%s | ColdGuard" },
   description: "Automatic refrigerator backup power, independent temperature monitoring, and cellular outage alerts in one appliance.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };

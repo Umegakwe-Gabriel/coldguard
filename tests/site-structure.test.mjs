@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const routeFiles = [
-  "app/page.tsx", "app/product/page.tsx", "app/technology/page.tsx",
+  "app/page.tsx", "app/about/page.tsx", "app/product/page.tsx", "app/technology/page.tsx",
   "app/monitor/page.tsx", "app/runtime/page.tsx", "app/pricing/page.tsx",
   "app/pilot/page.tsx", "app/pilot/success/page.tsx",
 ];

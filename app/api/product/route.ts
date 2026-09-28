@@ -1,6 +1,6 @@
 export async function GET() {
   return Response.json({
-    product: "ColdProof",
+    product: "ColdGuard",
     promise: "Know it stayed cold—even when the power and Wi-Fi went out.",
     developmentStatus: "concept prototype",
     targetRuntimeHours: 24,

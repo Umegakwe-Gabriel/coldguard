@@ -41,7 +41,7 @@ export function StatusMonitor({ full = false }: { full?: boolean }) {
       </div>
     </div>
     {full && <div className="monitor-lower">
-      <section className="event-panel"><div className="panel-heading"><div><span>Event timeline</span><h2>What ColdProof knows</h2></div><Activity /></div>{status.events.map((event, index) => <div className="event-row" key={event.label}><span className="event-check"><Check /></span><div><b>{event.label}</b><p>{event.detail}</p></div><time>{event.time}</time></div>)}</section>
+      <section className="event-panel"><div className="panel-heading"><div><span>Event timeline</span><h2>What ColdGuard knows</h2></div><Activity /></div>{status.events.map((event, index) => <div className="event-row" key={event.label}><span className="event-check"><Check /></span><div><b>{event.label}</b><p>{event.detail}</p></div><time>{event.time}</time></div>)}</section>
       <section className="rules-panel"><div className="panel-heading"><div><span>Automatic rules</span><h2>What triggers an alert</h2></div><BellRing /></div><div className="rule"><Zap /><div><b>Grid power fails</b><p>Immediate outage alert</p></div><span>Armed</span></div><div className="rule"><ThermometerSnowflake /><div><b>Temperature rises</b><p>Escalation above threshold</p></div><span>Armed</span></div><div className="rule"><BatteryCharging /><div><b>Battery falls below 20%</b><p>Low-runtime warning</p></div><span>Armed</span></div><div className="rule"><WifiOff /><div><b>Cellular link drops</b><p>Local decisions continue</p></div><span>Local</span></div></section>
     </div>}
   </div>;

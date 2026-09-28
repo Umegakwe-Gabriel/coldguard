@@ -1,19 +1,2 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { BatteryCharging, BellRing, Box, Cpu, PanelTop, Radio, ShieldCheck, ThermometerSnowflake, Zap } from "lucide-react";
-import { PageIntro } from "@/components/site/page-intro";
-import { SectionCta } from "@/components/site/section-cta";
-
-export const metadata: Metadata = { title: "Technology", description: "Understand ColdProof power, sensing, cellular, and local-control architecture." };
-const modules = [
-  [Box, "Enclosure", "Vented metal shell designed around thermal management and service access."], [BatteryCharging, "LiFePO₄ pack", "2–2.5 kWh concept pack with an integrated battery-management system."], [Zap, "Power stage", "Pure-sine inverter, charger, and automatic grid-to-battery transfer."], [ShieldCheck, "Protection", "Breakers, isolation, and fault handling around a compressor-capable load."], [Cpu, "Controller", "Local software combines power, battery, and temperature evidence."], [Radio, "Cellular", "LTE modem and antenna carry critical notifications independently of Wi‑Fi."], [PanelTop, "Interface", "At-a-glance display, controls, and a local audible alarm."], [ThermometerSnowflake, "Temperature probes", "Food-safe wired sensing for refrigerator and freezer compartments."],
-];
-export default function TechnologyPage() {
-  return <main><PageIntro eyebrow="Technology" title={<>Four systems. One local decision engine.</>} text="ColdProof joins power, sensing, communications, and control without making protection depend on the internet." />
-    <section className="architecture wrap"><div className="architecture-image"><Image src="/coldproof-modules.webp" alt="Exploded view of the ColdProof concept modules" width={1672} height={941} priority /></div><div className="architecture-caption"><span>Concept architecture</span><p>Serviceable modules make the prototype more practical to assemble, validate, diagnose, and repair.</p></div></section>
-    <section className="module-section"><div className="wrap"><div className="section-heading"><span className="eyebrow">Inside ColdProof</span><h2>Each module has one clear responsibility.</h2></div><div className="module-grid">{modules.map(([Icon, name, text], index) => { const ModuleIcon = Icon as typeof Box; return <article key={String(name)}><span>{String(index + 1).padStart(2, "0")}</span><ModuleIcon /><h3>{String(name)}</h3><p>{String(text)}</p></article>; })}</div></div></section>
-    <section className="decision-section wrap"><div className="section-heading centered"><span className="eyebrow">Local-first logic</span><h2>The response continues when connectivity does not.</h2></div><div className="decision-flow"><div><Zap /><b>Power fails</b><span>Transfer begins</span></div><i /><div><Cpu /><b>Device evaluates</b><span>Load, temperature, battery</span></div><i /><div><BellRing /><b>Response triggers</b><span>Alarm, log, cellular alert</span></div></div><div className="decision-note"><ShieldCheck /><p><b>Cellular is a notification path, not a dependency.</b> If LTE disappears, automatic transfer, temperature monitoring, safety rules, and local alarms continue on the unit.</p></div></section>
-    <section className="validation-section"><div className="wrap"><div><span className="eyebrow">Development sequence</span><h2>Measure before custom hardware.</h2></div><ol><li><span>01</span><div><b>Measure</b><p>Log refrigerator energy, startup surge, and temperature for 48–72 hours.</p></div></li><li><span>02</span><div><b>Assemble</b><p>Pair a certified LiFePO₄ UPS with the low-voltage smart module.</p></div></li><li><span>03</span><div><b>Integrate</b><p>Combine sensing, local logic, display, logging, and cellular alerts.</p></div></li><li><span>04</span><div><b>Validate</b><p>Run 15-minute, 2-hour, 8-hour, and full 24-hour outage tests.</p></div></li></ol></div></section>
-    <SectionCta />
-  </main>;
-}
+import { redirect } from "next/navigation";
+export default function TechnologyRedirect() { redirect("/about"); }
