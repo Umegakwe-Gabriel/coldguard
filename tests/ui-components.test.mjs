@@ -16,10 +16,10 @@ test("forwards progress semantics to the primitive", async () => {
   assert.match(html, /aria-valuetext="37%"/);
 });
 
-test("renders the ColdProof brand mark with an accessible home link", async () => {
+test("renders the ColdGuard brand mark with an accessible home link", async () => {
   const { Logo } = await vite.ssrLoadModule("/components/site/logo.tsx");
   const html = renderToStaticMarkup(React.createElement(Logo));
-  assert.match(html, /aria-label="ColdProof home"/);
+  assert.match(html, /aria-label="ColdGuard home"/);
   assert.match(html, /Cold/);
-  assert.match(html, /Proof/);
+  assert.match(html, /Guard/);
 });

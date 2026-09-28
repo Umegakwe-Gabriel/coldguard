@@ -11,7 +11,7 @@ const routeFiles = [
   "app/pilot/page.tsx", "app/pilot/success/page.tsx",
 ];
 
-test("ships every public ColdProof route", async () => {
+test("ships every public ColdGuard route", async () => {
   await Promise.all(routeFiles.map((file) => access(path.join(root, file))));
 });
 
@@ -22,7 +22,7 @@ test("redirects a successful pilot application to its own page", async () => {
 });
 
 test("includes the product visuals and responsive design rules", async () => {
-  await Promise.all(["coldproof-home.webp", "coldproof-modules.webp", "coldproof-unit.webp", "coldproof-logo.svg"].map((file) => access(path.join(root, "public", file))));
+  await Promise.all(["coldguard-home.webp", "coldguard-modules.webp", "coldguard-unit.webp", "coldguard-logo.svg"].map((file) => access(path.join(root, "public", file))));
   const css = await readFile(path.join(root, "app/globals.css"), "utf8");
   assert.match(css, /@media\(max-width:680px\)/);
   assert.match(css, /prefers-reduced-motion:reduce/);
